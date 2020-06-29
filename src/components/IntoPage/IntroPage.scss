@@ -1,11 +1,30 @@
 @mixin DownPage($bkgColor) {
   width: 100%;
-  height: 65vh;
+  height: 60vh;
   margin: auto;
   background-color: $bkgColor;
   color: white;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .IntroPageSubTitle {
+    margin-left: 100px;
+  }
+  .IntroPageSubExplain {
+    margin-left: 100px;
+  }
 }
-
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-snap-type: y mandatory;
+}
+section {
+  position: relative;
+  scroll-snap-align: center;
+}
 .IntroPage {
   &-First {
     width: 100%;
@@ -31,8 +50,8 @@
       }
       &-Start {
         margin-top: 100px;
-        width: 130px;
-        height: 40px;
+        width: 120px;
+        height: 35px;
         background-color: #f5be2e;
         color: white;
         border: none;
